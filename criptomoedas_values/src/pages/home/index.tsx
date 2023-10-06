@@ -92,15 +92,9 @@ function Home() {
                             </td>
                             <td data-label="Mercado">{item.formatedMarket}</td>
                             <td data-label="Preço">{item.formatedPrice}</td>
-                            {item.formatedDelta && Number(item.formatedDelta) > 0 ? (
-                                <td data-label="Volume" className={style.td_win}>
-                                    {item.formatedDelta}
-                                </td>
-                            ):
-                                <td data-label="Volume" className={style.td_loss}>
-                                    {item.formatedDelta}
-                                </td>
-                            }
+                            <td data-label="Volume" className={Number(item.formatedDelta) > 0 ? style.td_win : style.td_loss}>
+                                {item.formatedDelta}
+                            </td>
                         </tr>
                     ))}
                 </tbody>

@@ -68,11 +68,7 @@ function Moeda() {
                     <p><strong>Preço: </strong>{info.formatedPrice}</p>
                     <p><strong>Maior Preço 24h: </strong>{info.formatedHigh}</p>
                     <p><strong>Menor Preço 24h: </strong>{info.formatedLow}</p>
-                    {Number(info.formatedDelta) >= 0 ?
-                        <p><strong>Delta 24h: </strong><span className={style.green}>{info.formatedDelta}</span></p>
-                        :
-                        <p><strong>Delta 24h: </strong><span className={style.red}>{info.formatedDelta}</span></p>
-                    }
+                    <p><strong>Delta 24h: </strong><span className={Number(info.formatedDelta) >= 0 ? style.green : style.red}>{info.formatedDelta}</span></p>
                     <p><strong>Valor Mercado: </strong>{info.formatedMarket}</p>
                 </section>
             )}
