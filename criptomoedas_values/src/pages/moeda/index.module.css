@@ -1,0 +1,50 @@
+main{
+    width: 100%;
+    color: #fff;
+}
+
+h2{
+    margin-top: 35px;
+    text-align: center;
+}
+
+span{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.92em;
+    color: #bbb;
+}
+
+.content{
+    max-width: 420px;
+    width: 80%;
+    background-color: #0f0f0f;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px auto;
+    color: #bbb;
+}
+
+.content p strong{
+    color: #fff
+}
+
+.content p{
+    margin-bottom: 10px;
+}
+
+.content p:last-child{
+    margin-bottom: 0;
+}
+
+p > span{
+    font-size: 1em;
+}
+
+.green{
+    color: rgb(0, 201, 0);
+}
+
+.red{
+    color: red;
+}
