@@ -1,0 +1,49 @@
+.main{
+    width: 90%;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.main_content{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.title{
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    padding: 25px 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.form > label{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 5px;
+    max-width: none;
+}
+
+.submit_button{
+    margin-top: 15px;
+    padding: 8px 10px;
+    background-color: rgb(0, 140, 255);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit_button > *{
+    margin-left: 5px;
+}

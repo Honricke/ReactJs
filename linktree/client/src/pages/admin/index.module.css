@@ -1,0 +1,110 @@
+.main{
+    padding-top: 50px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.submit_button{
+    margin-top: 35px;
+    padding: 8px 10px;
+    background-color: rgb(0, 140, 255);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit_button > *{
+    margin-left: 5px;
+}
+
+.main_content{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.form{
+    width: 100%;
+    max-width: none;
+}
+
+.color_select{
+    margin-top: 15px;
+}
+
+.color_select > label:nth-child(2){
+    margin-left: 20px;
+}
+
+.color_select  input{
+    height: 35px;
+    width: 40px;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.title{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.link_container{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+}
+
+.box_line > * > div{
+    padding: 8px !important;
+    text-align: left;
+}
+
+.box_line > a{
+    width: 100%;
+}
+
+.box_line > a > div:hover{
+    transform: scale(1);
+}
+
+.box_line{
+    display: flex;
+    position: relative;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 10px;
+    transform: translatey(50%);
+
+    background-color: #4e4e4e;
+    padding: 5px;
+    border-radius: 3px;
+    border: dashed #fff 1px;
+    cursor: pointer;
+}
+.preview_box{
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #696969;
+    padding: 20px 70px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

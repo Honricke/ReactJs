@@ -48,7 +48,6 @@ function Home() {
             })
 
             setCoins(formatedResult)
-            console.log(coins)
         })
         .catch(err => {
             console.log(err)
@@ -62,6 +61,27 @@ function Home() {
         }
     }
 
+    function filter_search(item: CoinProps){
+        if (item.name.toLowerCase().includes(input.toLowerCase()) || item.symbol.toLowerCase().includes(input.toLowerCase()) || input == ''){
+            return (
+                <tr>
+                    <td data-label="Moeda">
+                        <Link className={style.link} to={'/moeda/'+item.symbol}>
+                            <strong>{item.name}</strong> | {item.symbol}
+                        </Link>
+                    </td>
+                    <td data-label="Mercado">{item.formatedMarket}</td>
+                    <td data-label="Preço">{item.formatedPrice}</td>
+                    <td data-label="Volume" className={Number(item.formatedDelta) > 0 ? style.td_win : style.td_loss}>
+                        {item.formatedDelta}
+                    </td>
+                </tr>
+            )
+        }else{
+            return false
+        }
+    }
+
     return ( 
         <main>
             <form className={style.search} onSubmit={submit_form}>
@@ -69,7 +89,7 @@ function Home() {
                     type="text"
                     value={input}
                     onChange={e => setInput(e.target.value)}
-                    placeholder="Digite o símbolo da moeda: BTC..."
+                    placeholder="Digite o nome da moeda: Bitcoin..."
                  />
                  <button><BiSearch size={30} color="#fff"/></button>
             </form>
@@ -83,24 +103,11 @@ function Home() {
                     </tr>
                 </thead>
                 <tbody className={style.table_body}>
-                    {coins && coins.map(item => (
-                        <tr>
-                            <td data-label="Moeda">
-                                <Link className={style.link} to={'/moeda/'+item.symbol}>
-                                    <strong>{item.name}</strong> | {item.symbol}
-                                </Link>
-                            </td>
-                            <td data-label="Mercado">{item.formatedMarket}</td>
-                            <td data-label="Preço">{item.formatedPrice}</td>
-                            <td data-label="Volume" className={Number(item.formatedDelta) > 0 ? style.td_win : style.td_loss}>
-                                {item.formatedDelta}
-                            </td>
-                        </tr>
-                    ))}
+                    {coins && coins.map(item => filter_search(item))}
                 </tbody>
             </table>
         </main>
-     );
+    );
 }
 
 export default Home;
